@@ -25,8 +25,11 @@ elif pendidikan == "S1" :
 else :
     tp = 0
 
-jkl = jk-8
-lembur = jkl*3500
+if jk > 8 :
+    lembur = (jk-8)*3500
+else :
+    lembur = 0
+    
 total = lembur+tp+tj+gaji
 
 print("==========================================")
