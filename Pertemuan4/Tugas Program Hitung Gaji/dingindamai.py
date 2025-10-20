@@ -32,8 +32,8 @@ else :
     
 total = lembur+tp+tj+gaji
 
-print("==========================================")
-print(f"Karyawan Yang Bernama {(nama)}")
+
+print(f"\nKaryawan Yang Bernama {(nama)}")
 print(f"Gaji Yang Diterima")
 print(f"    Gaji Pokok           Rp{int(gaji)}")
 print(f"    Tunjangan Jabatan    Rp{int(tj)}")
