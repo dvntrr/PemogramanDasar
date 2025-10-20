@@ -1,8 +1,8 @@
 print("PROGRAM HITUNG GAJI KARYAWAN")
-nama = input("Masukkan Nama Karyawan : ")
-golongan = input("Masukkan Golongan Jabatan (1/2/3) : ")
-pendidikan = input("Masukkan Pendidikan (SMA/D1/D3/S1) : ").upper()
-jk = int(input("Masukkan Jumlah Jam Kerja : "))
+nama = input("  Masukkan Nama Karyawan             : ").capitalize()
+golongan = input("  Masukkan Golongan Jabatan (1/2/3)  : ")
+pendidikan = input("  Masukkan Pendidikan (SMA/D1/D3/S1) : ").upper()
+jk = int(input("  Masukkan Jumlah Jam Kerja          : "))
 gaji = 300000
 
 if golongan == "1" :
@@ -33,8 +33,8 @@ else :
 total = lembur+tp+tj+gaji
 
 print("==========================================")
-print(f"Karyawan Yang Bernama {nama}")
-print(f"Honor Yang Diterima")
+print(f"Karyawan Yang Bernama {(nama)}")
+print(f"Gaji Yang Diterima")
 print(f"    Gaji Pokok           Rp{int(gaji)}")
 print(f"    Tunjangan Jabatan    Rp{int(tj)}")
 print(f"    Tunjangan Pendidikan Rp{int(tp)}")
