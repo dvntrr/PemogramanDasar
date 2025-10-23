@@ -44,9 +44,9 @@ print("No. Jenis Potong  Harga Satuan  Banyak Beli  Jumlah")
 print("---------------------------------------------------------")
 for i in range(len(list_bjenis)):
     if list_bjenis[i] == "Dada" or list_bjenis[i] == "Paha" :
-        print(f"{i+1}       {list_bjenis[i]}         Rp.{list_harga[i]}        {list_beli[i]}        Rp.{list_jumlah[i]}")
+        print(f"{i+1}       {list_bjenis[i]}         Rp.{list_harga[i]}         {list_beli[i]}       Rp.{list_jumlah[i]}")
     elif list_bjenis[i] == "Sayap" :
-        print(f"{i+1}       {list_bjenis[i]}        Rp.{list_harga[i]}        {list_beli[i]}        Rp.{list_jumlah[i]}")
+        print(f"{i+1}       {list_bjenis[i]}        Rp.{list_harga[i]}         {list_beli[i]}       Rp.{list_jumlah[i]}")
     print("---------------------------------------------------------")
 
 pajak = total1*0.10
