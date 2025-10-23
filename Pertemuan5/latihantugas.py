@@ -5,11 +5,18 @@ print("P    Paha    Rp.2000")
 print("S    Sayap   Rp.1500")
 print("--------------------------")
 
+list_bjenis = []
+list_harga = []
+list_beli =[]
+list_jumlah = []
+
+total1 = 0
+
 bjenis = int(input("Banyak Jenis : "))
 for i in range(bjenis):
     print(f"Jenis Ke-{i+1}")
     kode = input("Kode Potong [D/P/S] : ").upper()
-    bpotong = int(input("Banyak Potong : "))
+    beli = int(input("Banyak Potong : "))
     if kode == "D" :
         harga = 2500
         jenis = "Dada"
@@ -23,17 +30,28 @@ for i in range(bjenis):
         print("Kode Tidak Valid")
         continue
         
-    jumlah = harga*bpotong
+    jumlah = harga*beli
     total1 += jumlah
+
+    list_bjenis.append(jenis)
+    list_harga.append(harga)
+    list_beli.append(beli)
+    list_jumlah.append(jumlah)
+
 print("\nGEROBAK FRIED CHICKEN")
 print("---------------------------------------------------------")
-for i2 in range(i):
-    print(f"{i2+1:<4} {jenis:<7} Rp.{harga:<7} {bpotong:<6} Rp.{jumlah}")
+print("No. Jenis Potong  Harga Satuan  Banyak Beli  Jumlah")
+print("---------------------------------------------------------")
+for i in range(len(list_bjenis)):
+    if list_bjenis[i] == "Dada" or list_bjenis[i] == "Paha" :
+        print(f"{i+1}       {list_bjenis[i]}         Rp.{list_harga[i]}        {list_beli[i]}        Rp.{list_jumlah[i]}")
+    elif list_bjenis[i] == "Sayap" :
+        print(f"{i+1}       {list_bjenis[i]}        Rp.{list_harga[i]}        {list_beli[i]}        Rp.{list_jumlah[i]}")
     print("---------------------------------------------------------")
 
-pajak = jumlah*0.10
-total2 = jumlah+pajak
+pajak = total1*0.10
+total2 = total1+pajak
 
-print(f"                                  Jumlah Bayar Rp.{total1}")
-print(f"                                  Pajak 10%    Rp.{pajak}")
-print(f"                                  Total Bayar  Rp.{total2}")
+print(f"                                Jumlah Bayar Rp.{int(total1)}")
+print(f"                                Pajak 10%    Rp.{int(pajak)}")
+print(f"                                Total Bayar  Rp.{int(total2)}")
