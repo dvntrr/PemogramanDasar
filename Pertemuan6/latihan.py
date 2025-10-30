@@ -14,8 +14,8 @@ for i in range(ulang) :
     list_total.append((list_uas[i] + list_uts[i]) / 2)
 
 print("=============================================================")
-print("  Nim        Nilai Uts        Nilai UAS                 Total")
+print("   Nim        Nilai Uts        Nilai UAS          Total      ")
 print("=============================================================")
 for i in range(ulang):
-    print("%s \t %i \t\t %i \t\t\t %i" % (list_nim[i],list_uts[i],list_uas[i],list_total[i]))
+    print(f"{list_nim[i]}         {list_uts[i]}               {list_uas[i]}               {int(list_total[i])}")
     print("=============================================================")
