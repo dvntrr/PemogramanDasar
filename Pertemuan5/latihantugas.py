@@ -27,7 +27,9 @@ for i in range(bjenis):
         harga = 1500
         jenis = "Sayap"
     else :
-        print("Kode Tidak Valid")
+        harga = 0
+        jenis = "-"
+        print("Kode Potong Tidak Valid")
         continue
         
     jumlah = harga*beli
